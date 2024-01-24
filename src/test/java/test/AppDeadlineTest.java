@@ -7,17 +7,16 @@ import data.SQLHelp;
 import page.LoginPageV1;
 
 import static com.codeborne.selenide.Selenide.open;
-import static data.SQLHelp.cleanDatabase;
 
-public class appDeadlineTest {
+public class AppDeadlineTest {
 
     @AfterAll
-    static void teardown() {
+    static void tearDownAll() {
         //cleanDatabase();
     }
 
     @Test
-    void succesLogin() {
+    void successLogin() {
         var login = open("http://localhost:9999", LoginPageV1.class);
         var authInfo = DataHelp.getAuthInfo();
         var verification = login.validLogin(authInfo);

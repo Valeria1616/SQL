@@ -12,13 +12,13 @@ public class DashBoardPage {
     private SelenideElement head = $("[data-test-id='dashboard']");
     private ElementsCollection card = $$(".list__item");
     private ElementsCollection cardButton = $$("[data-test-id='action-deposit']");
-    private final String balanceStart = "баланс: ";
+    private final String balanceStart = "баланс:";
     private final String balanceFinish = " р.";
     public DashBoardPage() {
         head.shouldBe(Condition.visible);
     }
 
-    public void verifyDashboadrPage() {
+    public void verifyDashBoardPage() {
         head.shouldBe(Condition.visible);
     }
 }
